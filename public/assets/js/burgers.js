@@ -5,7 +5,7 @@ $(function() {
     var newSleep = $(this).data("newsleep");
 
     var newSleepState = {
-      sleepy: newSleep
+      eaten: newSleep
     };
 
     // Send the PUT request.
@@ -27,7 +27,7 @@ $(function() {
 
     var newburger = {
       name: $("#ca").val().trim(),
-      sleepy: $("[name=sleepy]:checked").val().trim()
+      eaten: $("[name=eaten]:checked").val().trim()
     };
 
     // Send the POST request.
