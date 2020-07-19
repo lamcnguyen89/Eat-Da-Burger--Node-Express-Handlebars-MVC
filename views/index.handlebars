@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row">
+  <div class="row m-3">
     <div class="col-sm">
       <h1 class="text-center">Sandwich Samsara</h1>
     </div>
@@ -9,9 +9,9 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-4"></div>
-    <div class="col-sm-4">
-        <h2>Birth a New Burger</h2>
+    
+    <div class="col-sm-3 mt-3 mb-3">
+        <h2> Build a Burger</h2>
         <form class="create-form">
 
           <div class="form-group">
@@ -21,21 +21,21 @@
 
           <div class="form-group">
             <label for="eaten">Burger Status </label><br>
-            <input type="radio" name="eaten" value="1" checked> Needs to be Eaten<br>
+            <input type="radio" name="eaten" value="1" checked> Needs to be Cooked<br>
             <input type="radio" name="eaten" value="0"> Already Eaten
           </div>
 
-          <button type="submit">Incarnate Burger</button>
+          <button type="submit">Build Burger</button>
         </form>
     </div>
-    <div class="col-sm-4"></div>
+    <div class="col-sm-9 mt-3 mb-3"><img src="/assets/BurgerCollage.PNG" alt="Italian Trulli"></div>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
     <div class="col-sm-6">
-      <h2 class="text-center">Finished Burgers</h2>
+      <h2 class="text-center">Burgers in Dining Area</h2>
 
       <ul>
         {{#each burgers}}
@@ -47,7 +47,7 @@
     </div>
 
     <div class="col-sm-6">
-      <h2 class="text-center">Burgers that Need to Be Eaten</h2>
+      <h2 class="text-center">Burgers in the Kitchen</h2>
 
       <ul>
         {{#each burgers}}

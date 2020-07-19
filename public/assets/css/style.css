@@ -1,7 +1,9 @@
 li {
-  padding: 5px;
-  margin: 5px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
   background: #faebd7;
+  border-radius: 15px;
 }
 
 .label {
@@ -20,4 +22,13 @@ li {
 
 ul {
   list-style-type: none;
+}
+
+body {background-color: #f5c1a3};
+
+
+
+button {
+  padding: 5px;
+  border-radius: 5px;
 }
