@@ -1,38 +1,63 @@
-<h1>Sandwich Samsara</h1>
-
-<h2>Burgers that Have Already Been Eaten</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless eaten}}
-      {{> burgers/burger-block eat=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Burgers that Need to Be Eaten</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if eaten}}
-      {{> burgers/burger-block eat=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Birth a New Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h1 class="text-center">Sandwich Samsara</h1>
+    </div>
   </div>
+  
+</div>
 
-  <div class="form-group">
-    <label for="eaten">Burger Status </label><br>
-    <input type="radio" name="eaten" value="1" checked> Needs to be Eaten<br>
-    <input type="radio" name="eaten" value="0"> Already Eaten
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+        <h2>Birth a New Burger</h2>
+        <form class="create-form">
+
+          <div class="form-group">
+            <label for="ca">Burger Name:</label>
+            <input type="text" id="ca" name="name">
+          </div>
+
+          <div class="form-group">
+            <label for="eaten">Burger Status </label><br>
+            <input type="radio" name="eaten" value="1" checked> Needs to be Eaten<br>
+            <input type="radio" name="eaten" value="0"> Already Eaten
+          </div>
+
+          <button type="submit">Incarnate Burger</button>
+        </form>
+    </div>
+    <div class="col-sm-4"></div>
   </div>
+</div>
 
-  <button type="submit">Incarnate Burger</button>
-</form>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h2 class="text-center">Finished Burgers</h2>
+
+      <ul>
+        {{#each burgers}}
+          {{#unless eaten}}
+            {{> burgers/burger-block eat=true}}
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="col-sm-6">
+      <h2 class="text-center">Burgers that Need to Be Eaten</h2>
+
+      <ul>
+        {{#each burgers}}
+          {{#if eaten}}
+            {{> burgers/burger-block eat=false}}
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
+
+
